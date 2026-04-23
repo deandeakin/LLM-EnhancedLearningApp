@@ -97,4 +97,12 @@ public class MainActivity extends AppCompatActivity {
             tvRecentActivity.setText("No recent activity yet.");
         }
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        String username = UserPrefs.getUsername(this);
+        loadRecentActivity(username);
+    }
 }
