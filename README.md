@@ -52,6 +52,8 @@ This Android project communicates with a separate backend server using Retrofit.
 - calling the Gemini API
 - returning structured JSON responses to the Android app
 
+The backend is kept separate from this Android Studio project, and API keys are not included in this repository.
+
 ## How to Run
 1. Open the project in Android Studio
 2. Sync the Gradle files
