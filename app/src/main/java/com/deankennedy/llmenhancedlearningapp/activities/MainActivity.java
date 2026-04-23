@@ -49,16 +49,11 @@ public class MainActivity extends AppCompatActivity {
         Set<String> savedInterestSet = UserPrefs.getInterests(this);
         ArrayList<String> interests = new ArrayList<>(savedInterestSet);
 
-        String primaryInterest = "your selected topic";
-        if (!interests.isEmpty()) {
-            primaryInterest = interests.get(0);
-        }
-
         // Populates the home screen text.
         tvWelcome.setText("Hello, " + username + "!");
         tvNotification.setText("You have 1 task due today.");
         tvGeneratedTaskLabel.setText("Generated Task 1");
-        tvGeneratedTaskDescription.setText("Practice a short activity based on your interest in " + primaryInterest + ".");
+        tvGeneratedTaskDescription.setText("Practice a short activity based on your selected interests.");
 
         // Loads the most recent AI/Task from the room history.
         loadRecentActivity(username);
